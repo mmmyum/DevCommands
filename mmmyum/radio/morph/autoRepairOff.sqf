@@ -1,0 +1,1 @@
+yumautorepair = false;

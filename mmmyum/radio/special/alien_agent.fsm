@@ -1,0 +1,631 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, alien_agent">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Init",0,250,-112.333649,-451.551453,-22.333626,-401.551697,0.000000,"Init"};
+item1[] = {"target",2,250,-111.329033,-107.299408,-21.328987,-57.299377,0.000000,"target"};
+item2[] = {"wait",4,218,-111.106651,-192.564789,-21.106651,-142.564789,0.000000,"wait"};
+item3[] = {"tp_to",4,218,-336.758728,-108.966202,-246.758743,-58.966225,1.000000,"tp" \n "to"};
+item4[] = {"within_range",4,218,-110.265472,-18.103199,-20.265430,31.896770,0.000000,"within" \n "range"};
+item5[] = {"do_tp",2,250,-335.363953,-19.647532,-245.363968,30.352468,0.000000,"do" \n "tp"};
+item6[] = {"spawn_zombies",2,250,-103.191856,321.059601,-13.191824,371.059631,0.000000,"spawn" \n "zombies"};
+item7[] = {"within_range",4,218,-336.416779,88.229858,-246.416779,138.229858,0.000000,"within" \n "range"};
+item8[] = {"close_yet_",4,218,-234.688690,-47.040237,-144.688660,2.959779,0.000000,"close" \n "yet?"};
+item9[] = {"still_close_",4,218,158.676300,321.673737,248.676285,371.673767,0.000000,"still" \n "close?"};
+item10[] = {"attack_",2,250,321.017517,322.519226,411.017487,372.519226,0.000000,"attack!"};
+item11[] = {"still_close_",4,218,245.939453,257.835388,335.939514,307.835388,1.000000,"still" \n "close?"};
+item12[] = {"too_far",2,250,132.973938,-107.188164,222.973953,-57.188194,0.000000,"too" \n "far"};
+item13[] = {"out_of_range",4,218,321.179382,-108.742371,411.179382,-58.742348,0.000000,"out of" \n "range"};
+item14[] = {"true",8,218,16.214565,-107.612617,106.214546,-57.612595,0.000000,"true"};
+item15[] = {"run_to__target",2,250,-104.693192,87.537399,-14.693161,137.537384,0.000000,"run to " \n "target"};
+item16[] = {"attack_range",4,218,-105.934158,210.179260,-15.934166,260.179291,0.000000,"attack" \n "range"};
+item17[] = {"keep_running",4,218,-186.239365,35.675087,-96.239380,85.675079,1.000000,"keep" \n "running"};
+item18[] = {"is_Dedicated",4,218,18.629402,-452.652649,118.629356,-402.652618,5.000000,"is" \n "Dedicated"};
+item19[] = {"delete",1,4346,490.641144,-448.622131,580.641052,-398.622070,0.000000,"delete"};
+item20[] = {"_",-1,250,190.130005,-439.145630,190.130005,-436.238281,0.000000,""};
+item21[] = {"",7,210,542.435364,467.449860,550.435364,475.449860,0.000000,""};
+item22[] = {"",7,210,-442.636658,468.276367,-434.636658,476.276367,0.000000,""};
+item23[] = {"cleanup",4,218,490.134918,-319.670166,580.134705,-269.670197,5.000000,"cleanup"};
+item24[] = {"",7,210,171.657639,-166.407379,179.657639,-158.407379,0.000000,""};
+item25[] = {"",7,210,537.076233,-168.893234,545.076233,-160.893219,0.000000,""};
+item26[] = {"",7,210,-449.802399,2.629877,-441.802399,10.629875,0.000000,""};
+item27[] = {"",7,210,361.193207,-3.401611,369.193207,4.598372,0.000000,""};
+item28[] = {"dead",4,218,629.743286,-248.756744,719.743286,-198.756973,4.000000,"dead"};
+item29[] = {"isSomeone_no_players",2,250,631.224426,-318.215851,721.224426,-268.215851,0.000000,"isSomeone" \n "no players" \n "close"};
+item30[] = {"waitplayers",4,218,629.695435,-385.789459,719.695435,-335.789459,5.000000,"waitplayers"};
+item31[] = {"stayalive_",4,218,381.473846,-318.695313,471.473846,-268.695313,3.000000,"stayalive?"};
+version=1;
+class LayoutItems
+{
+	class Item20
+	{
+		class ItemInfo
+		{
+			FontFace="Arial";
+			FontHeight=10;
+			lStyle=1;
+		};
+	};
+};
+link0[] = {0,2};
+link1[] = {0,18};
+link2[] = {1,3};
+link3[] = {1,4};
+link4[] = {1,24};
+link5[] = {2,1};
+link6[] = {3,5};
+link7[] = {4,15};
+link8[] = {5,7};
+link9[] = {5,8};
+link10[] = {5,26};
+link11[] = {6,9};
+link12[] = {6,22};
+link13[] = {6,27};
+link14[] = {7,15};
+link15[] = {8,5};
+link16[] = {9,10};
+link17[] = {10,11};
+link18[] = {10,21};
+link19[] = {10,27};
+link20[] = {11,10};
+link21[] = {12,14};
+link22[] = {12,24};
+link23[] = {13,12};
+link24[] = {14,1};
+link25[] = {15,16};
+link26[] = {15,17};
+link27[] = {15,22};
+link28[] = {16,6};
+link29[] = {17,15};
+link30[] = {18,19};
+link31[] = {21,25};
+link32[] = {22,21};
+link33[] = {23,19};
+link34[] = {24,25};
+link35[] = {25,23};
+link36[] = {25,28};
+link37[] = {25,31};
+link38[] = {26,22};
+link39[] = {27,13};
+link40[] = {28,29};
+link41[] = {29,30};
+link42[] = {30,19};
+link43[] = {31,19};
+globals[] = {0.000000,0,0,0,0,640,480,1,35,6316128,1,-253.282837,563.567749,153.309662,-679.072388,894,911,1};
+window[] = {2,-1,-1,-32000,-32000,810,50,1490,50,3,912};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "alien_agent";
+  class States
+  {
+    /*%FSM<STATE "Init">*/
+    class Init
+    {
+      name = "Init";
+      init = /*%FSM<STATEINIT""">*/"_agent = _this select 0;" \n
+       "_type = _this select 1;" \n
+       "_startPos = _this select 2;" \n
+       "_origPos = _this select 3;" \n
+       "" \n
+       "//moveTo origPos so alien doesn't stand there waiting for a target" \n
+       "_agent moveTo _origPos;" \n
+       "//" \n
+       "" \n
+       "_targets = [];" \n
+       "_zedTypes = [];" \n
+       "" \n
+       "" \n
+       "//init AI features" \n
+       "_agent disableAI ""TARGET"";" \n
+       "_agent disableAI ""AUTOTARGET"";" \n
+       "_runSpeed = 7;" \n
+       "_agent disableAI ""FSM"";" \n
+       "_agent setBehaviour ""COMBAT"";" \n
+       "_agent setCombatMode ""RED"";" \n
+       "_agent setSkill 1;" \n
+       "" \n
+       "//init vars" \n
+       "_humanTypes = [""SoldierEB"",""SoldierWB"",""SoldierGB""];" \n
+       "_attackRange = false;" \n
+       "_numZombify = 5;" \n
+       "_timeN = time;" \n
+       "_alienZeds = [];" \n
+       "_stayAlive = ({(isPlayer _x) and (alive _x) and (_agent distance _x < 1500)} count playableUnits) > 0;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "is_Dedicated">*/
+        class is_Dedicated
+        {
+          priority = 5.000000;
+          to="delete";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"isDedicated"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "wait">*/
+        class wait
+        {
+          priority = 0.000000;
+          to="target";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"dayz_clientPreload and !(isNull _agent)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"cutText [format [(""Alien Agent AI started Alien = %1 | Type = %2 | OrigPos = %3 | StartPos = %4""), _agent,_type,_origPos,_startPos], ""PLAIN DOWN""];"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "target">*/
+    class target
+    {
+      name = "target";
+      init = /*%FSM<STATEINIT""">*/"_isSomeone = ({(isPlayer _x) and (alive _x) and (_agent distance _x < 150)} count playableUnits) > 0;" \n
+       "/*" \n
+       "if (_isSomeone) then {" \n
+       "_humans = (position _agent) nearEntities [_humanTypes,150];" \n
+       "_targets = _humans;" \n
+       "_agent setVariable [""targets"",_targets];" \n
+       "_mainTarget = _humans select 0;" \n
+       "_posTarget = getPosATL _mainTarget;" \n
+       "_agent setVariable [""dest"",_posTarget];" \n
+       "cutText [format [(""Alien Agent AI _isSomeone TRUE NO TP Alien = %1 | mainTarget = %2 | posTaget = %3 | Position = %4""), _agent,_mainTarget,_posTarget,(getPosATL _agent)], ""PLAIN DOWN""];" \n
+       "} else {" \n
+       "" \n
+       "{" \n
+       "if (isPlayer _x) then {" \n
+       "if  (alive  _x) then {" \n
+       "if (_agent distance _x < 10000) exitWith { _mainTarget = _x };" \n
+       "};" \n
+       "};" \n
+       "} forEach playableUnits;" \n
+       "_posTarget = getPosATL _mainTarget;" \n
+       "_agent setVariable [""dest"",_posTarget];" \n
+       "cutText [format [(""Alien Agent AI _isSomeone FALSE  TP Alien = %1 | mainTarget = %2 | posTaget = %3 | Position = %4""), _agent,_mainTarget,_posTarget,(getPosATL _agent)], ""PLAIN DOWN""];" \n
+       "};" \n
+       "*/" \n
+       "" \n
+       "_mainTarget = player;" \n
+       "_posTarget = getPosATL _mainTarget;" \n
+       "_agent setVariable [""dest"",_posTarget];" \n
+       "cutText [format [(""Alien Agent AI  Alien = %1 | mainTarget = %2 | posTaget = %3 | Position = %4""), _agent,_mainTarget,_posTarget,(getPosATL _agent)], ""PLAIN DOWN""];" \n
+       "" \n
+       "" \n
+       "_isAlive = alive _agent;" \n
+       "_stayAlive = ({(isPlayer _x) and (alive _x) and (_agent distance _x < 1500)} count playableUnits) > 0;" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "cleanup">*/
+        class cleanup
+        {
+          priority = 5.000000;
+          to="delete";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"isNull player"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "dead">*/
+        class dead
+        {
+          priority = 4.000000;
+          to="isSomeone_no_players";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!_isAlive"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "stayalive_">*/
+        class stayalive_
+        {
+          priority = 3.000000;
+          to="delete";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!_stayAlive"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "tp_to">*/
+        class tp_to
+        {
+          priority = 1.000000;
+          to="do_tp";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!_isSomeone"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "within_range">*/
+        class within_range
+        {
+          priority = 0.000000;
+          to="run_to__target";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_isSomeone"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_agent moveTo _posTarget;" \n
+           "_agent forceSpeed _runSpeed;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "do_tp">*/
+    class do_tp
+    {
+      name = "do_tp";
+      init = /*%FSM<STATEINIT""">*/"_isSomeone = ({(isPlayer _x) and (alive _x) and (_agent distance _x < 150)} count playableUnits) > 0;" \n
+       "_timeN = time;" \n
+       "_tpTo = [_posTarget,20,150,5,0,2000,0] call BIS_fnc_findSafePos;" \n
+       "_agent setPos _tpTo;" \n
+       "_isAlive = alive _agent;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "cleanup">*/
+        class cleanup
+        {
+          priority = 5.000000;
+          to="delete";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"isNull player"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "dead">*/
+        class dead
+        {
+          priority = 4.000000;
+          to="isSomeone_no_players";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!_isAlive"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "stayalive_">*/
+        class stayalive_
+        {
+          priority = 3.000000;
+          to="delete";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!_stayAlive"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "close_yet_">*/
+        class close_yet_
+        {
+          priority = 0.000000;
+          to="do_tp";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(time - _timeN) > 3"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_posTarget = getPosATL _mainTarget;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "within_range">*/
+        class within_range
+        {
+          priority = 0.000000;
+          to="run_to__target";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_isSomeone"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_agent moveTo _posTarget;" \n
+           "_agent forceSpeed _runSpeed;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "spawn_zombies">*/
+    class spawn_zombies
+    {
+      name = "spawn_zombies";
+      init = /*%FSM<STATEINIT""">*/"_zedPos = getPosATL _agent;" \n
+       "" \n
+       "while {_numZombify > 0} do {" \n
+       "" \n
+       "_zed = [_zedPos,_posTarget,_mainTarget] call alien_spawnZombieHorde;" \n
+       "_alienZeds set [(count _alienZeds),_zed];" \n
+       "_numZombify = _numZombify - 1;" \n
+       "};" \n
+       "_isSomeone = ({(isPlayer _x) and (alive _x) and (_agent distance _x < 150)} count playableUnits) > 0;" \n
+       "_agent doTarget player;" \n
+       "_isAlive = alive _agent;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "cleanup">*/
+        class cleanup
+        {
+          priority = 5.000000;
+          to="delete";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"isNull player"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "dead">*/
+        class dead
+        {
+          priority = 4.000000;
+          to="isSomeone_no_players";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!_isAlive"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "stayalive_">*/
+        class stayalive_
+        {
+          priority = 3.000000;
+          to="delete";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!_stayAlive"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "out_of_range">*/
+        class out_of_range
+        {
+          priority = 0.000000;
+          to="too_far";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!_isSomeone"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "still_close_">*/
+        class still_close_
+        {
+          priority = 0.000000;
+          to="attack_";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_isSomeone"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "attack_">*/
+    class attack_
+    {
+      name = "attack_";
+      init = /*%FSM<STATEINIT""">*/"_timeN = time;" \n
+       "_isSomeone = ({(isPlayer _x) and (alive _x) and (_agent distance _x < 150)} count playableUnits) > 0;" \n
+       "if ((moveToCompleted _agent) or (_mainTarget distance _posTarget > 25)) then {" \n
+       "_posTarget = getPosATL _mainTarget;" \n
+       "_runTo =  [_posTarget,20,80,5,0,2000,0] call BIS_fnc_findSafePos;" \n
+       "_agent moveTo _runTo;" \n
+       "};" \n
+       "_agent doFire player;" \n
+       "_isAlive = alive _agent;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "cleanup">*/
+        class cleanup
+        {
+          priority = 5.000000;
+          to="delete";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"isNull player"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "dead">*/
+        class dead
+        {
+          priority = 4.000000;
+          to="isSomeone_no_players";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!_isAlive"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "stayalive_">*/
+        class stayalive_
+        {
+          priority = 3.000000;
+          to="delete";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!_stayAlive"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "still_close_">*/
+        class still_close_
+        {
+          priority = 1.000000;
+          to="attack_";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(time - _timeN) > 1"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "out_of_range">*/
+        class out_of_range
+        {
+          priority = 0.000000;
+          to="too_far";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!_isSomeone"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "too_far">*/
+    class too_far
+    {
+      name = "too_far";
+      init = /*%FSM<STATEINIT""">*/"_isSomeone = false;" \n
+       "" \n
+       "{" \n
+       "deleteVehicle _x;" \n
+       "} forEach _alienZeds;" \n
+       "" \n
+       "_isAlive = alive _agent;" \n
+       "_stayAlive = ({(isPlayer _x) and (alive _x) and (_agent distance _x < 1500)} count playableUnits) > 0;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "cleanup">*/
+        class cleanup
+        {
+          priority = 5.000000;
+          to="delete";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"isNull player"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "dead">*/
+        class dead
+        {
+          priority = 4.000000;
+          to="isSomeone_no_players";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!_isAlive"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "stayalive_">*/
+        class stayalive_
+        {
+          priority = 3.000000;
+          to="delete";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!_stayAlive"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "true">*/
+        class true
+        {
+          priority = 0.000000;
+          to="target";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "run_to__target">*/
+    class run_to__target
+    {
+      name = "run_to__target";
+      init = /*%FSM<STATEINIT""">*/"if ((moveToCompleted _agent) or (_mainTarget distance _posTarget > 25)) then {" \n
+       "_posTarget = getPosATL _mainTarget;" \n
+       "_runTo =  [_posTarget,20,50,5,0,2000,0] call BIS_fnc_findSafePos;" \n
+       "_agent moveTo _runTo;" \n
+       "};" \n
+       "if (_agent distance _mainTarget < 50) then {" \n
+       "_attackRange = true;" \n
+       "};" \n
+       "_timeN = time;" \n
+       "_isAlive = alive _agent;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "cleanup">*/
+        class cleanup
+        {
+          priority = 5.000000;
+          to="delete";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"isNull player"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "dead">*/
+        class dead
+        {
+          priority = 4.000000;
+          to="isSomeone_no_players";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!_isAlive"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "stayalive_">*/
+        class stayalive_
+        {
+          priority = 3.000000;
+          to="delete";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!_stayAlive"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "keep_running">*/
+        class keep_running
+        {
+          priority = 1.000000;
+          to="run_to__target";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(time - _timeN) > 3"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "attack_range">*/
+        class attack_range
+        {
+          priority = 0.000000;
+          to="spawn_zombies";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_attackRange"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "delete">*/
+    class delete
+    {
+      name = "delete";
+      init = /*%FSM<STATEINIT""">*/"if (!isNull _agent) then {" \n
+       "diag_log format [""AIUNIT: YUMALIEN:::Delete %1 at %2"",_agent,(getPosATL _agent)];" \n
+       "	deleteVehicle _agent;" \n
+       "};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "isSomeone_no_players">*/
+    class isSomeone_no_players
+    {
+      name = "isSomeone_no_players";
+      init = /*%FSM<STATEINIT""">*/"_isSomeone = ({(isPlayer _x) and (alive _x) and (_agent distance _x < 50)} count playableUnits) > 0;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "waitplayers">*/
+        class waitplayers
+        {
+          priority = 5.000000;
+          to="delete";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!_isSomeone"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="Init";
+  finalStates[] =
+  {
+    "delete",
+  };
+};
+/*%FSM</COMPILE>*/

@@ -1,0 +1,1 @@
+yum_player_shield = false;
