@@ -8,14 +8,17 @@ _devs = ["48467270"];
 
 */
 //player_death =	compile preprocessFileLineNumbers "mmmyum\radio\special\player_death.sqf";
+//player_spawn_2 = compile preprocessFileLineNumbers "fixes\player_spawn_2.sqf"; //YUM
+
 alien_spawnZombieHorde = compile preprocessFileLineNumbers "mmmyum\radio\special\alien_callZombieHorde.sqf";
  CUSTOM_menu = [
             ["YUM Menu",false],
             ["NearLocation",[2],"",-5,[["expression","[] execVM 'mmmyum\radio\yum\nearlocation.sqf'"]],"1","1"],
             ["yum_locations",[3],"",-5,[["expression","[] execVM 'mmmyum\radio\yum\yum_locations.sqf'"]],"1","1"],
-            ["locdebug1",[4],"",-5,[["expression","[] execVM 'mmmyum\radio\yum\null1.sqf'"]],"1","1"],
-            ["locdebug2",[5],"",-5,[["expression","[] execVM 'mmmyum\radio\yum\null2.sqf'"]],"1","1"],
-            ["CameraScript",[6],"",-5,[["expression","player execVM 'mmmyum\radio\yum\AlPmaker_survcam.sqf'"]],"1","1"]
+            ["YumMonitor",[4],"",-5,[["expression","[] execVM 'mmmyum\radio\yum\yum_monitor.sqf'"]],"1","1"],
+			["YumMonitorOff",[5],"",-5,[["expression","[] execVM 'mmmyum\radio\yum\yum_monitorOff.sqf'"]],"1","1"],
+            ["LocNull",[6],"",-5,[["expression","[] execVM 'mmmyum\radio\yum\locnull.sqf'"]],"1","1"],
+            ["CameraScript",[7],"",-5,[["expression","player execVM 'mmmyum\radio\yum\AlPmaker_survcam.sqf'"]],"1","1"]
 			];
 			
  CUSTOM_menu_create = [
