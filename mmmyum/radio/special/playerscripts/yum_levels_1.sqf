@@ -70,31 +70,31 @@ if (_type == 2) then {
 
 	//level 5
 	if (_score > 20) then {
-		_level = 1;
+		_level = 5;
 		//level up code
 	};
 	
 	//level 6
 	if (_score > 40) then {
-		_level = 2;
+		_level = 6;
 		//level up code
 	};
 	
 	//level 7
 	if (_score > 60) then {
-		_level = 3;
+		_level = 7;
 		//level up code
 	};
 	
 	//level 8
 	if (_score > 80) then {
-		_level = 4;
+		_level = 8;
 		//level up code
 	};
 	
 	//level 9
 	if (_score > 100) then {
-		_level = 5;
+		_level = 9;
 		//level up
 	};
 };
