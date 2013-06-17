@@ -68,33 +68,33 @@ if (_type == 2) then {
 	//get score and select right alien type
 	_score = (_bKills / 2) + _hKills + (_eKills * 2) + (_fKills / 4) - _zKills;
 
-	//level 5
+	//level 1
 	if (_score > 20) then {
-		_level = 5;
+		_level = 1;
 		//level up code
 	};
 	
-	//level 6
+	//level 2
 	if (_score > 40) then {
-		_level = 6;
+		_level = 2;
 		//level up code
 	};
 	
-	//level 7
+	//level 3
 	if (_score > 60) then {
-		_level = 7;
+		_level = 3;
 		//level up code
 	};
 	
-	//level 8
+	//level 4
 	if (_score > 80) then {
-		_level = 8;
+		_level = 4;
 		//level up code
 	};
 	
-	//level 9
+	//level 5
 	if (_score > 100) then {
-		_level = 9;
+		_level = 5;
 		//level up
 	};
 };
