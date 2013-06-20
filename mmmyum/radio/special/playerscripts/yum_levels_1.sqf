@@ -173,6 +173,6 @@ if (_type == 4) then {
 
 
 //take type and level and transform character to suit
-[_type,_level] spawn player_levelUp;
+[_type,_level] spawn yum_fnc_levelUp;
 
 

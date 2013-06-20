@@ -9,7 +9,7 @@ _devs = ["48467270"];
 */
 //player_death =	compile preprocessFileLineNumbers "mmmyum\radio\special\player_death.sqf";
 //player_spawn_2 = compile preprocessFileLineNumbers "fixes\player_spawn_2.sqf"; //YUM
-
+yum_fnc_levelUp = compile preprocessFileLineNumbers "mmmyum\radio\special\yum_fnc_levelUp.sqf";
 alien_spawnZombieHorde = compile preprocessFileLineNumbers "mmmyum\radio\special\alien_callZombieHorde.sqf";
  CUSTOM_menu = [
             ["YUM Menu",false],
