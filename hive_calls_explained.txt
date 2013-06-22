@@ -1,0 +1,26 @@
+CHILD:NO. = method: parameters
+ 
+- Tents, vehicles (objects) & misc (objectUID of vehicles are always 0)
+CHILD:302 = streamObjects: serverId
+CHILD:303 = objectInventory: objectUID,inventory
+CHILD:304 = objectDelete: objectUID
+CHILD:305 = vehicleMoved: objectUID,worldspace,fuel
+CHILD:306 = vehicleDamaged: objectUID,hitPoints,damage
+CHILD:307 = getDateTime: no parameters, only result
+CHILD:308 = objectPublish: serverId,className,damage,characterId,worldspace,inventory,hitPoints,fuel,uniqueId
+CHILD:309 = same method as 303
+CHILD:310 = same method as 304
+ 
+- Character loading
+CHILD:101 = loadPlayer: playerId,0,playerName
+CHILD:102 = loadCharacterDetails: characterId
+CHILD:103 = recordCharacterLogin: playerId,0,action
+ 
+-- Character updates
+CHILD:201 = playerUpdate: characterId,worldspace,inventory,backpack,medical,just_ate,just_drank,zombie_kills,headshots,0,survival_time,state,survivor_kills,bandit_kills,model,humanity,last_slept
+CHILD:202 = playerDeath: characterId,duration
+CHILD:203 = playerInit: characterId,inventory,backpack
+ 
+-- Custom query
+CHILD:998 = streamCustom: query,rawParams (NOTE: CURRENTLY BROKEN)
+CHILD:999 = customExecute: query,rawParams
