@@ -37,27 +37,21 @@ if (_type == 1) then {
 	
 	_score = (_bKills / 2) + _hKills + (_eKills * 2) + (_fKills / 4) - _zKills;
 
-	//Level 1 
-	if (_score > 0) then {
-	        _level = 1;
-	        //level up code
+	//level 1
+	if (_score > 5) then {
+		_level = 1;
+		//level up code
 	};
 	
 	//level 2
-	if (_score > 5) then {
+	if (_score > 10) then {
 		_level = 2;
 		//level up code
 	};
 	
 	//level 3
-	if (_score > 10) then {
-		_level = 3;
-		//level up code
-	};
-	
-	//level 4
 	if (_score > 15) then {
-		_level = 4;
+		_level = 3;
 		//level up code
 	};
 	
@@ -173,6 +167,6 @@ if (_type == 4) then {
 
 
 //take type and level and transform character to suit
-[_type,_level] spawn yum_fnc_levelUp;
+[_type,_level] spawn player_levelUp;
 
 
