@@ -86,7 +86,10 @@ if (_type == 1) then {
 		_level = 6;
 		//level up code
 	};
-
+	if (_score > 30) then {
+		_type = 2;
+		//level up code to next type
+	};
 
 };
 
@@ -155,6 +158,10 @@ if (_type == 2) then {
 		_level = 10;
 		//level up
 	};
+	if (_score > 360) then {
+		_type = 9;
+		//level up code to next type (predator)
+	};
 };
 
 //ESF
@@ -221,6 +228,10 @@ if (_type == 3) then {
 		_level = 10;
 		//level up
 	};
+	if (_score > 360) then {
+		_type = 10;
+		//level up code to next type (mastercheif)
+	};
 };
 
 //4thReich 
@@ -286,6 +297,10 @@ if (_type == 4) then {
 	if (_score > 300) then {
 		_level = 10;
 		//level up
+	};
+	if (_score > 360) then {
+		_type = 2;
+		//level up code to next type
 	};
 };
 
