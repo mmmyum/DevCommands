@@ -3,7 +3,7 @@
 
 _character = _this select 0;
 
-_type = _character getVariable ["playerSide",0]; //0 = survivor, 1 = zombie, 2 = alien, 3 = esf, 4 = 4thReich, 5 = resistance, 6 = bandit, 7 = glower, 8 = outlander, 9 = predator, 10 = master chief, 11 = dimentional, 12 = legend
+_type = _character getVariable ["playerSide",0]; //0 = survivor, 1 = zombie, 2 = alien, 3 = esf, 4 = 4thReich, 5 = resistance, 6 = bandit, 7 = outlander, 8 = glower, 9 = predator, 10 = master chief, 11 = dimentional, 12 = legend
 
 _zKills = _character getVariable ["zombieKills",0];
 _rKills = _character getVariable ["resistanceKills",0];
@@ -86,7 +86,7 @@ if (_type == 1) then {
 		_level = 6;
 		//level up code
 	};
-	if (_score > 30) then {
+	if (_score > 32) then {
 		_type = 2;
 		//level up code to next type
 	};
@@ -100,13 +100,13 @@ if (_type == 2) then {
 	_score = (_rKills * 2) + (_bKills / 2) + (_dKills / 4) + _sKills + _gKills + _oKills + (_eKills * 2) + (_fKills / 4) + (_pKills * 4) + (_mKills * 8) + (_lKills * 3) - (_zKills + (_aKills * 6));
 
 	//level 1
-	if (_score > 30) then {
+	if (_score > 32) then {
 		_level = 1;
 		//level up code
 	};
 
 	//level 2
-	if (_score > 40) then {
+	if (_score > 46) then {
 		_level = 2;
 		//level up code
 	};
@@ -158,7 +158,7 @@ if (_type == 2) then {
 		_level = 10;
 		//level up
 	};
-	if (_score > 360) then {
+	if (_score > 500) then {
 		_type = 9;
 		//level up code to next type (predator)
 	};
@@ -170,13 +170,13 @@ if (_type == 3) then {
 	_score = (_fKills * 4) + (_zKills / 2) + (_aKills * 2) + (_bKills * 2) + _oKills + (_lKills / 8) + (_pKills * 10) + (_dKills * 8) + _sHeals - (_sKills + _rKills + (_eKills * 4));
 
 	//level 1
-	if (_score > 20) then {
+	if (_score > 32) then {
 		_level = 1;
 		//level up code
 	};
 
 	//level 2
-	if (_score > 40) then {
+	if (_score > 46) then {
 		_level = 2;
 		//level up code
 	};
@@ -228,7 +228,7 @@ if (_type == 3) then {
 		_level = 10;
 		//level up
 	};
-	if (_score > 360) then {
+	if (_score > 500) then {
 		_type = 10;
 		//level up code to next type (mastercheif)
 	};
@@ -240,13 +240,13 @@ if (_type == 4) then {
 	_score =  (_hKills2 / 2) + (_eKills * 4) + _rKills + _oKills + _gKills + (_lKills *5) + (_mKills *10) + _pKills - ((_fKills / 4) + _zKills + (_bKills / 2) + (_dKills * 4));
 
 	//level 1
-	if (_score > 20) then {
+	if (_score > 32) then {
 		_level = 1;
 		//level up code
 	};
 
 	//level 2
-	if (_score > 40) then {
+	if (_score > 46) then {
 		_level = 2;
 		//level up code
 	};
@@ -298,9 +298,9 @@ if (_type == 4) then {
 		_level = 10;
 		//level up
 	};
-	if (_score > 360) then {
-		_type = 2;
-		//level up code to next type
+	if (_score > 500) then {
+		_type = 11;
+		//level up code to next type (dimentional)
 	};
 };
 
@@ -338,6 +338,10 @@ if (_type == 5) then {
 		_level = 5;
 		//level up
 	};
+	if (_score > 32) then {
+		_type = 3;
+		//level up code to next type (ESF)
+	};
 };
 
 //bandit terrorist
@@ -370,9 +374,13 @@ if (_type == 6) then {
 	};
 
 	//level 5
-	if (_score > 22) then {
+	if (_score > 32) then {
 		_level = 5;
 		//level up
+	};
+	if (_score > 32) then {
+		_type = 4;
+		//level up code to next type (4thR)
 	};
 };
 
@@ -417,6 +425,10 @@ if (_type == 7) then {
 		_level = 6;
 		//level up code
 	};
+	if (_score > 32) then {
+		_type = 8;
+		//level up code to next type (Glower)
+	};
 };
 
 //glower half-life type "healer"
@@ -426,13 +438,13 @@ if (_type == 8) then {
 	 _score = _zKills + _aKills  + _fKills + (_eKills / 4) + (_bKills / 6) + (_sHeals * 6) + _bHeals + (_pKills * 2) + (_dKills * 2) - (_rKills + (_sKills * 9));
 
 	//level 1
-	if (_score > 30) then {
+	if (_score > 32) then {
 		_level = 1;
 		//level up code
 	};
 
 	//level 2
-	if (_score > 40) then {
+	if (_score > 46) then {
 		_level = 2;
 		//level up code
 	};
@@ -483,6 +495,10 @@ if (_type == 8) then {
 	if (_score > 300) then {
 		_level = 10;
 		//level up
+	};
+	if (_score > 500) then {
+		_type = 12;
+		//level up code to next type (legend)
 	};
 };
 
@@ -573,7 +589,7 @@ if (_type == 10) then {
 };
 
 //dimentional type
-if (_type == 6) then {
+if (_type == 11) then {
 	//get score and select right skin type
 	_score =  (_hKills2 / 2) + (_eKills * 4) + _rKills + _oKills + _gKills + (_lKills *5) + (_mKills *10) + _pKills - ((_fKills / 4) + _zKills + (_bKills / 2) + (_dKills * 6));
 
@@ -615,7 +631,7 @@ if (_type == 6) then {
 };
 
 //legend type "paladin"
-if (_type == 7) then {
+if (_type == 12) then {
 	//get player skin and switch for zombie texture
 	//player_zedMorph ---- disable player functions set on login
     _score = _zKills + _aKills  + _fKills + _aKills + (_pKills * 5) + (_dKills * 5) + (_eKills / 4) + (_bKills / 6) + (_sHeals * 4) + (_bHeals * 2) - (_rKills + (_sKills * 9));
